@@ -5,6 +5,11 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 
+import pysqlite3
+import sys
+
+sys.modules["sqlite3"] = sys.modules["pysqlite3"]
+
 def generate_response(uploaded_file, openai_api_key, query_text):
     # Load document if file is uploaded
     if uploaded_file is not None:
