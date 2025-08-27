@@ -2,5 +2,6 @@ streamlit
 langchain
 openai
 chromadb
+sqlite3 => 3.35.0.
 tiktoken
 langchain_community
